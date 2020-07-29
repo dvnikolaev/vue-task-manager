@@ -1,11 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-    </v-app-bar>
+    <AppNavigation />
 
     <v-main>
 
@@ -14,7 +9,11 @@
 </template>
 
 <script>
+import AppNavigation from "@/components/Navigation/AppNavigation";
 
 export default {
+  components: {
+    AppNavigation
+  }
 };
 </script>
