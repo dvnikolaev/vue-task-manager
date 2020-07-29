@@ -2,8 +2,10 @@
   <v-app>
     <AppNavigation />
 
-    <v-main>
-
+    <v-main class="align-center">
+      <v-container>
+        <router-view></router-view>
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -13,7 +15,7 @@ import AppNavigation from "@/components/Navigation/AppNavigation";
 
 export default {
   components: {
-    AppNavigation
-  }
+    AppNavigation,
+  },
 };
 </script>
