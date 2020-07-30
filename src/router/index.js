@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Index from '@/pages/Index';
 import Tasks from '@/pages/Tasks';
+import Completed from '@/pages/Completed';
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,10 @@ Vue.use(VueRouter)
     {
       path: '/tasks',
       component: Tasks
+    },
+    {
+      path: '/completed',
+      component: Completed
     }
 ]
 
