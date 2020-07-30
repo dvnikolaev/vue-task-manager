@@ -39,8 +39,7 @@ export default {
       this.$store.commit('addTask', {
         title: this.title,
         description: this.description,
-        date: this.date,
-        status: 'inwork'
+        date: this.date
       });
     }
   },
