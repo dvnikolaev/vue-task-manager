@@ -60,6 +60,16 @@ export default new Vuex.Store({
         completed: false,
       });
     },
+    completeTask(state, id) {
+      let foundIndex = state.tasks.findIndex(task => task.id === id);
+
+      state.tasks[foundIndex].completed = true;
+    },
+    rejectTask(state, id) {
+      let foundIndex = state.tasks.findIndex(task => task.id === id);
+      
+      state.tasks.splice(foundIndex,1);
+    }
   },
   actions: {},
   getters: {
@@ -68,7 +78,7 @@ export default new Vuex.Store({
     },
     getCompletedTasks: (state) => {
       return state.tasks.filter((item) => item.completed);
-    },
+    }
   },
   modules: {},
 });
