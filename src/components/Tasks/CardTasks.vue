@@ -1,7 +1,7 @@
 <template>
   <v-card max-width="1000px" class="mx-auto">
     <v-card-title>{{ header }}</v-card-title>
-    <ListTasks />
+    <ListTasks :tasks="tasks"/>
   </v-card>
 </template>
 
@@ -14,6 +14,7 @@ export default {
       type: String,
       default: "Поставленные задачи",
     },
+    tasks: Array
   },
   components: {
     ListTasks,
