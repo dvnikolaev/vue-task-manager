@@ -8,11 +8,7 @@
         required
       ></v-text-field>
       <DataPicker :date="date" @update:date="updateDate" />
-      <v-btn 
-        color="success"
-        class="align-self-end"
-        :disabled="!valid"
-        @click="addTask">
+      <v-btn color="success" class="align-self-end" @click="addTask">
         Создать
       </v-btn>
     </v-form>
@@ -28,7 +24,6 @@ export default {
       date: new Date().toISOString().substr(0, 10),
       title: "",
       description: "",
-      valid: true,
     };
   },
   methods: {
@@ -36,12 +31,19 @@ export default {
       this.date = value;
     },
     addTask() {
-      this.$store.commit('addTask', {
-        title: this.title,
-        description: this.description,
-        date: this.date
-      });
-    }
+      if (this.title && this.description) {
+        this.$store.commit("addTask", {
+          title: this.title,
+          description: this.description,
+          date: this.date,
+        });
+        this.clearForm();
+      }
+    },
+    clearForm() {
+      this.title = "";
+      this.description = "";
+    },
   },
   components: {
     DataPicker,
