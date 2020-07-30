@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     tasks: [
       {
+        id: 1,
         title: "Content filtering",
         description:
           "Set the content filtering level to restrict appts that can be downloaded",
@@ -14,6 +15,7 @@ export default new Vuex.Store({
         completed: false
       },
       {
+        id: 2,
         title: "Content filtering",
         description:
           "Set the content filtering level to restrict appts that can be downloaded",
@@ -21,6 +23,7 @@ export default new Vuex.Store({
         completed: false
       },
       {
+        id: 3,
         title: "Content filtering",
         description:
           "Set the content filtering level to restrict appts that can be downloaded",
@@ -28,6 +31,7 @@ export default new Vuex.Store({
         completed: false
       },
       {
+        id: 4,
         title: "Content filtering",
         description:
           "Set the content filtering level to restrict appts that can be downloaded",
@@ -35,6 +39,7 @@ export default new Vuex.Store({
         completed: true
       },
       {
+        id: 5,
         title: "Content filtering",
         description:
           "Set the content filtering level to restrict appts that can be downloaded",
@@ -45,7 +50,10 @@ export default new Vuex.Store({
   },
   mutations: {
     addTask(store, payload) {
+      let lastId = store.tasks.length ? store.tasks[store.tasks.length - 1].id + 1 : 0;
+
       store.tasks.push({
+        id: lastId,
         title: payload.title,
         description: payload.description,
         date: payload.date,
