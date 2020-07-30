@@ -1,7 +1,8 @@
 <template>
   <v-card max-width="max-content" class="mx-auto">
     <v-card-title>{{ header }}</v-card-title>
-    <ListTasks :tasks="tasks"/>
+    <ListTasks :tasks="tasks" v-if="tasks.length"/>
+    <h2 class="text-center" v-else>Нет задач</h2>
   </v-card>
 </template>
 
