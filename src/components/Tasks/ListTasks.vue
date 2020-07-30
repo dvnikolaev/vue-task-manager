@@ -1,6 +1,6 @@
 <template>
   <v-list three-line>
-    <ItemTask v-for="(task, i) in tasks" :key="i" :task="task" />
+    <ItemTask v-for="task in tasks" :key="task.id" :task="task" />
   </v-list>
 </template>
 
