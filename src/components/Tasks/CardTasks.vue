@@ -1,5 +1,5 @@
 <template>
-  <v-card max-width="1000px" class="mx-auto">
+  <v-card max-width="max-content" class="mx-auto">
     <v-card-title>{{ header }}</v-card-title>
     <ListTasks :tasks="tasks"/>
   </v-card>
