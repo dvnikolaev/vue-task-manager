@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Index from '@/pages/Index';
+import Tasks from '@/pages/Tasks';
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,10 @@ Vue.use(VueRouter)
     {
       path: '/',
       component: Index
+    },
+    {
+      path: '/tasks',
+      component: Tasks
     }
 ]
 
