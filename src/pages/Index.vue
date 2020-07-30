@@ -13,8 +13,3 @@ export default {
   },
 };
 </script>
-
-<style>
-  .page__index {
-  }
-</style>
