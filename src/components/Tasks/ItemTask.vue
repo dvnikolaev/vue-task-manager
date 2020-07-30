@@ -1,7 +1,7 @@
 <template>
   <v-list-item>
     <v-list-item-content>
-      <v-list-item-title>{{ task.title }} {{ task.id }}</v-list-item-title>
+      <v-list-item-title>{{ task.title }}</v-list-item-title>
       <v-list-item-subtitle>{{ task.description }}</v-list-item-subtitle>
       <v-list-item-subtitle>{{ task.date }}</v-list-item-subtitle>
     </v-list-item-content>
