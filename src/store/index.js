@@ -19,6 +19,18 @@ export default new Vuex.Store({
   },
   actions: {
   },
+  getters: {
+    getInWorkTasks: state => {
+      return state.tasks.filter(item => {
+        item.status === 'inwork';
+      })
+    },
+    getCompletedTasks: state => {
+      return state.tasks.filter(item => {
+        item.status === 'completed'
+      });
+    }
+  },
   modules: {
   }
 })
