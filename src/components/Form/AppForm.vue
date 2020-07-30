@@ -1,5 +1,6 @@
 <template>
   <v-card max-width="600px" class="mx-auto pa-3">
+    <v-card-title>Создать задачу</v-card-title>
     <v-form class="d-flex flex-column">
       <v-text-field label="Заголовок" v-model="title" required></v-text-field>
       <v-text-field
