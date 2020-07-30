@@ -1,7 +1,6 @@
 <template>
   <v-list three-line>
-    <ItemTask />
-    <ItemTask />
+    <ItemTask v-for="(task, i) in tasks" :key="i" :task="task" />
   </v-list>
 </template>
 
@@ -9,6 +8,9 @@
 import ItemTask from "./ItemTask";
 
 export default {
+  props: {
+    tasks: Array,
+  },
   components: {
     ItemTask,
   },
